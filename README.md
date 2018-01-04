@@ -10,7 +10,28 @@ Back-End Deployed Site:  https://still-thicket-16022.herokuapp.com/
 Back-End Repo:  https://github.com/Tbdwdi/Nozama-Back-End
 
 ERD :  https://imgur.com/gallery/CpPAd
-Routes :  https://imgur.com/gallery/o3FeG
+API Endpoints :  https://imgur.com/gallery/o3FeG
+
+USERS
+- POST /sign-up
+- POST /sign-in
+- PATCH /change-password/:id
+- DELETE /sign-out/:id
+
+ORDERS
+- POST /orders
+- GET /orders
+
+PRODUCTS (as user)
+- GET /products
+
+PRODUCTS (as admin)
+- POST /products
+- PATCH /products/:id
+- DELETE /products/:id
+
+TOKENS
+- POST /tokens
 
 Technologies used: Express, Mongo, Mongoose, NodeJs, Javascript, Stripe
 
