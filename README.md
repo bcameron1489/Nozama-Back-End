@@ -1,34 +1,53 @@
-README
+# Express E-Commerce Team Project / Back-End
 
-Express E-Commerce Team Project / Back-End
+## Links:
 
-Links:
+### Front-End Deployed Site:  https://tbdwdi.github.io/Nozama-Front-End/
+### Front-End Repo:  https://github.com/Tbdwdi/Nozama-Front-End
+### Back-End Deployed Site:  https://still-thicket-16022.herokuapp.com/
+### Back-End Repo:  https://github.com/Tbdwdi/Nozama-Back-End
 
-Front-End Deployed Site:  https://tbdwdi.github.io/Nozama-Front-End/
-Front-End Repo:  https://github.com/Tbdwdi/Nozama-Front-End
-Back-End Deployed Site:  https://still-thicket-16022.herokuapp.com/
-Back-End Repo:  https://github.com/Tbdwdi/Nozama-Back-End
+## ERD :  https://imgur.com/gallery/CpPAd
+## API Endpoints :  https://imgur.com/gallery/o3FeG
 
-ERD :  https://imgur.com/gallery/CpPAd
-Routes :  https://imgur.com/gallery/o3FeG
+### USERS
+- POST /sign-up
+- POST /sign-in
+- PATCH /change-password/:id
+- DELETE /sign-out/:id
 
-Technologies used: Express, Mongo, Mongoose, NodeJs, Javascript, Stripe
+### ORDERS
+- POST /orders
+- GET /orders
 
-What is Nozama and how does it work?
+### PRODUCTS (as user)
+- GET /products
+
+### PRODUCTS (as admin)
+- POST /products
+- PATCH /products/:id
+- DELETE /products/:id
+
+### TOKENS
+- POST /tokens
+
+## Technologies used
+Express, Mongo, Mongoose, NodeJs, Javascript, Stripe
+
+## What is Nozama and how does it work?
 
 Nozama is an E-Commerce site created by Derek McIntire, Peter Samson and Brian Cameron.  Together, using express/mongo as a back end api (and stripe as a third party api for checkout), we have created a simple shopping site.  The user may browse the site to view the products but must sign in to access the sites functionality.  From there a user may add products to their cart and proceed to a checkout where they may submit their order.  From their the user must fill out the appropriate fields for their order to be processed through stripe.  Once the order has been confirmed their cart is stored and is ready to be processed into our database.
 
-User Stories : https://imgur.com/gallery/Gr7E7
+## User Stories : https://imgur.com/gallery/Gr7E7
 
-
-developer:
+## Developer:
 
 As a developer, I want to protect my database by only allowing an admin to have full CRUD actions.
 As a developer, I want to simplify my code to make it readable and modular.
 As a developer, I want to focus on a user friendly layout with clear and simply functionality.
 As a developer, I want to create a SPA.
 
-Development Process :
+## Development Process :
 
   -  Draw up ERD, wireframes and user stories for planning.
   -  Carefully plan and scrum a unified team idea and approach our goals methodically.
@@ -52,6 +71,6 @@ Development Process :
 
 This team project was an integral part in our growth as developers.  Everyone communicated, came prepared and conducted themselves in a professional manner.  The planning process in a team versus a solo project varied greatly.  Having everyone on the same page and working towards a unified goal helped immensely.  Furthermore, having several different minds with their own skill sets made it much easier to make breakthroughs on complex problems.
 
-Unsolved Problems :
+## Unsolved Problems :
 
 There are several different ways we could integrate a delete/update action to our site however due to time constraints we chose to settle for admin privilages to allow for easy access to add/remove/update products.  Additionally, if we'd like to expand our site and really beef up our site with resources we believe their will be issues with our cart.  For the time being it made sense to store a users 'cart' data on the front end instead of creating another relationship on the back end however, upon site expansion, we may want to add that relationship to the back end and refactor our code.
